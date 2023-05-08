@@ -1,0 +1,136 @@
+﻿@model IEnumerable<Tomates.Models.Pelicula>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+<div>
+    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+        <ul class="navbar-nav flex-grow-1">
+            <li class="navbar-nav">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Peliculas" asp-action="Scraper">Scraper</a>
+            </li>
+            <li class="navbar-nav">
+                <a class="nav-link text-dark" asp-area="" asp-controller="PeliculaPlataformas" asp-action="Index">Pelicula Plataformas</a>
+            </li>
+            <li class="navbar-nav">
+                <a class="nav-link text-dark" asp-area="" asp-controller="PeliculaCelebridads" asp-action="Index">Pelicula Celebridades</a>
+            </li>
+
+        </ul>
+    </div>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ImagenSrc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sinopsis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TomatometroCalificacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AudienciaCalificacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TomatometroContadorCalificacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AudienciaContadorCalificacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clasificacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Genero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LenguajeOriginal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaLanzamientoCine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaLanzamientoTransmision)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Duracion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Distribuidor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CoProduccion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImagenSrc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sinopsis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TomatometroCalificacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AudienciaCalificacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TomatometroContadorCalificacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AudienciaContadorCalificacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Clasificacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LenguajeOriginal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaLanzamientoCine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaLanzamientoTransmision)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duracion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Distribuidor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CoProduccion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

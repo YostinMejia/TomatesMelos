@@ -1,0 +1,78 @@
+﻿@model Tomates.Models.Serie
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Serie</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ImagenSrc" class="control-label"></label>
+                <input asp-for="ImagenSrc" class="form-control" />
+                <span asp-validation-for="ImagenSrc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sinopsis" class="control-label"></label>
+                <input asp-for="Sinopsis" class="form-control" />
+                <span asp-validation-for="Sinopsis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TomatometroCalificacion" class="control-label"></label>
+                <input asp-for="TomatometroCalificacion" class="form-control" />
+                <span asp-validation-for="TomatometroCalificacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AudienciaCalificacion" class="control-label"></label>
+                <input asp-for="AudienciaCalificacion" class="form-control" />
+                <span asp-validation-for="AudienciaCalificacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TomatometroContadorCalificacion" class="control-label"></label>
+                <input asp-for="TomatometroContadorCalificacion" class="form-control" />
+                <span asp-validation-for="TomatometroContadorCalificacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AudienciaContadorCalificacion" class="control-label"></label>
+                <input asp-for="AudienciaContadorCalificacion" class="form-control" />
+                <span asp-validation-for="AudienciaContadorCalificacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Genero" class="control-label"></label>
+                <input asp-for="Genero" class="form-control" />
+                <span asp-validation-for="Genero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechalanzamientoTransmision" class="control-label"></label>
+                <input asp-for="FechalanzamientoTransmision" class="form-control" />
+                <span asp-validation-for="FechalanzamientoTransmision" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Network" class="control-label"></label>
+                <input asp-for="Network" class="form-control" />
+                <span asp-validation-for="Network" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
